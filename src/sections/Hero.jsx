@@ -53,12 +53,12 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 pt-24 md:pt-32 pb-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 md:px-6 pt-24 md:pt-32 pb-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-12 items-center">
           {/* Left Column - Text Content */}
-          <div className="space-y-8 text-center lg:text-left">
+          <div className="space-y-6 md:space-y-8 text-center lg:text-left">
             <div className="animate-fade-in flex justify-center lg:justify-start">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xs md:text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                 Software Engineer • React Specialist
               </span>
@@ -66,7 +66,7 @@ export const Hero = () => {
 
             {/* Headline */}
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in animation-delay-100">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
                 Hello!<span className="text-primary glow-text"></span>
                 <br />
                 I'm{" "}
@@ -75,7 +75,7 @@ export const Hero = () => {
                 Full Stack Developer
                 <br />
               </h1>
-              <p className="text-base md:text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0 animate-fade-in animation-delay-200">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0 animate-fade-in animation-delay-200 leading-relaxed">
                 A software engineer specializing in React.js, Node.js, Next.js, 
                 and TypeScript. I build scalable, performant web applications that
                 users love.
@@ -83,15 +83,15 @@ export const Hero = () => {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4 animate-fade-in animation-delay-300">
+              <Button size="lg" className="w-full sm:w-auto">
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedBorderButton>
+              <AnimatedBorderButton className="w-full sm:w-auto">
                 <a
                   href="/Pradeep_Solanki_Resume.pdf"
                   download="Pradeep_solanki_22-04-2026.pdf"
-                  className="flex items-center gap-2"
+                  className="flex items-center justify-center gap-2 w-full"
                 >
                   <Download className="w-5 h-5" />
                   Download CV
