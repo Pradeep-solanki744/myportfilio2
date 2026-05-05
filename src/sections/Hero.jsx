@@ -89,8 +89,8 @@ export const Hero = () => {
               </Button>
               <AnimatedBorderButton className="w-full sm:w-auto">
                 <a
-                  href="/Pradeep_Solanki_Resume.pdf"
-                  download="Pradeep_solanki_22-04-2026.pdf"
+                  href="/Pradeep_solanki_22-04-2026.pdf"
+                  download="Pradeep_Solanki_Resume.pdf"
                   className="flex items-center justify-center gap-2 w-full"
                 >
                   <Download className="w-5 h-5" />
