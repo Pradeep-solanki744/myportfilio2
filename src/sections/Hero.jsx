@@ -53,11 +53,11 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
+      <div className="container mx-auto px-6 pt-24 md:pt-32 pb-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
-          <div className="space-y-8">
-            <div className="animate-fade-in">
+          <div className="space-y-8 text-center lg:text-left">
+            <div className="animate-fade-in flex justify-center lg:justify-start">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                 Software Engineer • React Specialist
@@ -66,7 +66,7 @@ export const Hero = () => {
 
             {/* Headline */}
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-6xl font-bold leading-tight animate-fade-in animation-delay-100">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in animation-delay-100">
                 Hello!<span className="text-primary glow-text"></span>
                 <br />
                 I'm{" "}
@@ -75,7 +75,7 @@ export const Hero = () => {
                 Full Stack Developer
                 <br />
               </h1>
-              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
+              <p className="text-base md:text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0 animate-fade-in animation-delay-200">
                 A software engineer specializing in React.js, Node.js, Next.js, 
                 and TypeScript. I build scalable, performant web applications that
                 users love.
@@ -83,7 +83,7 @@ export const Hero = () => {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 animate-fade-in animation-delay-300">
               <Button size="lg">
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
@@ -100,8 +100,8 @@ export const Hero = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-              <span className="text-sm text-muted-foreground">Follow me: </span>
+            <div className="flex items-center justify-center lg:justify-start gap-4 animate-fade-in animation-delay-400">
+              <span className="text-sm text-muted-foreground hidden sm:inline-block">Follow me: </span>
               {[
                 { icon: Github, href: "https://github.com/Pradeep-solanki744" },
                 {
@@ -125,9 +125,9 @@ export const Hero = () => {
             </div>
           </div>
           {/* Right Column - Profile Image */}
-          <div className="relative animate-fade-in animation-delay-300">
+          <div className="relative animate-fade-in animation-delay-300 mt-8 lg:mt-0">
             {/* Profile Image */}
-            <div className="relative max-w-md mx-auto">
+            <div className="relative max-w-sm md:max-w-md mx-auto">
               <div
                 className="absolute inset-0 
               rounded-3xl bg-gradient-to-br 
@@ -142,18 +142,18 @@ export const Hero = () => {
                 />
 
                 {/* Floating Badge */}
-                <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                    <span className="text-sm font-medium">
+                <div className="absolute -bottom-2 -right-2 md:-bottom-4 md:-right-4 glass rounded-xl px-3 py-2 md:px-4 md:py-3 animate-float scale-90 md:scale-100">
+                  <div className="flex items-center gap-2 md:gap-3">
+                    <div className="w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full animate-pulse" />
+                    <span className="text-xs md:text-sm font-medium">
                       Available for work
                     </span>
                   </div>
                 </div>
                 {/* Stats Badge */}
-                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">0+</div>
-                  <div className="text-xs text-muted-foreground">
+                <div className="absolute -top-2 -left-2 md:-top-4 md:-left-4 glass rounded-xl px-3 py-2 md:px-4 md:py-3 animate-float animation-delay-500 scale-90 md:scale-100">
+                  <div className="text-xl md:text-2xl font-bold text-primary">0+</div>
+                  <div className="text-[10px] md:text-xs text-muted-foreground">
                     Years Exp.
                   </div>
                 </div>
@@ -163,23 +163,23 @@ export const Hero = () => {
         </div>
 
         {/* Skills Section */}
-        <div className="mt-20 animate-fade-in animation-delay-600">
+        <div className="mt-16 md:mt-20 animate-fade-in animation-delay-600">
           <p className="text-sm text-muted-foreground mb-6 text-center">
             Technologies I work with
           </p>
           <div className="relative overflow-hidden">
             <div
-              className="absolute left-0 top-0 bottom-0 w-32
+              className="absolute left-0 top-0 bottom-0 w-16 md:w-32
              bg-gradient-to-r from-background to-transparent z-10"
             />
             <div
-              className="absolute right-0 top-0 bottom-0 w-32
+              className="absolute right-0 top-0 bottom-0 w-16 md:w-32
              bg-gradient-to-l from-background to-transparent z-10"
             />
             <div className="flex animate-marquee">
               {[...SKILLS, ...SKILLS].map((skill, idx) => (
-                <div key={idx} className="flex-shrink-0 px-8 py-4">
-                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
+                <div key={idx} className="flex-shrink-0 px-4 md:px-8 py-2 md:py-4">
+                  <span className="text-lg md:text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
                     {skill}
                   </span>
                 </div>
@@ -190,8 +190,8 @@ export const Hero = () => {
       </div>
 
       <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 
-      animate-fade-in animation-delay-800"
+        className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 
+      animate-fade-in animation-delay-800 hidden md:block"
       >
         <a
           href="#about"
