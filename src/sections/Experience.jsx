@@ -8,19 +8,19 @@ export const Experience = () => {
        h-64 md:h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2"
       />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mb-12 md:mb-16 text-center md:text-left mx-auto md:mx-0">
           <span
-            className="text-secondary-foreground text-sm
+            className="text-secondary-foreground text-xs md:text-sm
            font-medium tracking-wider uppercase animate-fade-in"
           >
             Career Journey
           </span>
           <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold
            mt-4 mb-6 animate-fade-in animation-delay-100
-            text-secondary-foreground"
+            text-secondary-foreground leading-tight"
           >
             Experience that{" "}
             <span className="font-serif italic font-normal text-white">
@@ -30,7 +30,7 @@ export const Experience = () => {
           </h2>
 
           <p
-            className="text-sm md:text-base text-muted-foreground
+            className="text-sm sm:text-base text-muted-foreground
            animate-fade-in animation-delay-200"
           >
             A timeline of my professional growth, from curious beginner to
@@ -66,25 +66,25 @@ export const Experience = () => {
                   }`}
                 >
                   <div
-                    className={`glass p-5 md:p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500`}
+                    className={`glass p-5 md:p-8 rounded-2xl border border-primary/20 hover:border-primary/40 transition-all duration-500`}
                   >
-                    <span className="text-xs md:text-sm text-primary font-medium">
+                    <span className="text-[10px] md:text-xs text-primary font-bold uppercase tracking-wider">
                       {exp.period}
                     </span>
-                    <h3 className="text-lg md:text-xl font-semibold mt-2">{exp.role}</h3>
-                    <p className="text-sm md:text-base text-muted-foreground">{exp.company}</p>
-                    <p className="text-xs md:text-sm text-muted-foreground mt-3 md:mt-4">
+                    <h3 className="text-xl md:text-2xl font-bold mt-2 text-foreground">{exp.role}</h3>
+                    <p className="text-sm md:text-base font-semibold text-primary/80">{exp.company}</p>
+                    <p className="text-sm md:text-base text-muted-foreground mt-4 leading-relaxed">
                       {exp.description}
                     </p>
                     <div
-                      className={`flex flex-wrap gap-2 mt-3 md:mt-4 ${
+                      className={`flex flex-wrap gap-2 mt-6 ${
                         idx % 2 === 0 ? "md:justify-end" : ""
                       }`}
                     >
                       {exp.technologies.map((tech, techIdx) => (
                         <span
                           key={techIdx}
-                          className="px-2 md:px-3 py-1 bg-surface text-[10px] md:text-xs rounded-full text-muted-foreground"
+                          className="px-3 py-1 bg-surface border border-border/50 text-[10px] md:text-xs rounded-full text-muted-foreground font-medium"
                         >
                           {tech}
                         </span>
