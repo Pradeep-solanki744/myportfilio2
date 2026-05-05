@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { Button } from "@/components/Button";
 import {
   ArrowRight,
@@ -9,37 +10,19 @@ import {
   Download,
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
-
-const skills = [
-  "React",
-  "Node.js",
-  "Next.js",
-  "Express.js",
-  "TypeScript",
-  "MongoDB",
-  "Redis",
-  "Docker",
-  "Vercel",
-  "Tailwind CSS",
-  "Figma",
-  "Git",
-  "GitHub Actions",
-  "BootStrap",
-  "JqueryAjex",
-  "Postman",
-  "Canva",
-  "Photoshop",
-  "VsCode",
-  "Core java",
-  "Python",
-  "Basic Kubernate",
-  "MySql",
-  "CICD Pipeline",
-  "Excel",
-  "Ms-powerPoint",
-];
+import { SKILLS } from "../constants/data";
 
 export const Hero = () => {
+  // Memoize random dots so they don't re-render jumpily
+  const dots = useMemo(() => {
+    return [...Array(30)].map(() => ({
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      animationDuration: `${15 + Math.random() * 20}s`,
+      animationDelay: `${Math.random() * 5}s`,
+    }));
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Bg */}
@@ -54,17 +37,16 @@ export const Hero = () => {
 
       {/* Green Dots */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(30)].map((_, i) => (
+        {dots.map((dot, i) => (
           <div
+            key={i}
             className="absolute w-1.5 h-1.5 rounded-full opacity-60"
             style={{
               backgroundColor: "#17dbc1",
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `slow-drift ${
-                15 + Math.random() * 20
-              }s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 5}s`,
+              left: dot.left,
+              top: dot.top,
+              animation: `slow-drift ${dot.animationDuration} ease-in-out infinite`,
+              animationDelay: dot.animationDelay,
             }}
           />
         ))}
@@ -87,14 +69,14 @@ export const Hero = () => {
               <h1 className="text-5xl md:text-6xl lg:text-6xl font-bold leading-tight animate-fade-in animation-delay-100">
                 Hello!<span className="text-primary glow-text"></span>
                 <br />
-                I'am{" "}
+                I'm{" "}
                 <span className="text-primary glow-text">Pradeep Solanki</span>
                 <br />
                 Full Stack Developer
                 <br />
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                A software engineer specializing in React.js, Node.js, Next.js, and
+                A software engineer specializing in React.js, Node.js, Next.js, 
                 and TypeScript. I build scalable, performant web applications that
                 users love.
               </p>
@@ -143,7 +125,7 @@ export const Hero = () => {
             </div>
           </div>
           {/* Right Column - Profile Image */}
-          <div className="relatice animate-fade-in animation-delay-300">
+          <div className="relative animate-fade-in animation-delay-300">
             {/* Profile Image */}
             <div className="relative max-w-md mx-auto">
               <div
@@ -195,7 +177,7 @@ export const Hero = () => {
              bg-gradient-to-l from-background to-transparent z-10"
             />
             <div className="flex animate-marquee">
-              {[...skills, ...skills].map((skill, idx) => (
+              {[...SKILLS, ...SKILLS].map((skill, idx) => (
                 <div key={idx} className="flex-shrink-0 px-8 py-4">
                   <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
                     {skill}

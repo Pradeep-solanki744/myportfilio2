@@ -1,43 +1,6 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
-const projects = [
-  {
-    title: "GYM Website Clone",
-    description:
-      "Developed a full-stack Gym Website Clone using modern web technologies to deliver a responsive and interactive user experience.",
-    image: "/projects/project1.png",
-    tags: ["React.js", "JavaScript", "NodeJS" ,"ExpresssJS", "Email Functionality", "BootStrap CSS" ],
-    link: "#",
-    github: "https://github.com/Pradeep-solanki744/GYM_Website_Using_MernFullStack_Project",
-  },
-  {
-    title: "Weather Report",
-    description:
-      "Develop an intractive web application using react.js freamwork. the developed application will provide weather information to user for the city.",
-    image: "/projects/project2.png",
-    tags: ["React.js", "Tailwind", "JavaScript", "Fetch Api", "Material UI", "OpenWeatherApi"],
-    link: "#",
-    github: "https://github.com/Pradeep-solanki744/Weather-application-using-react.js-",
-  },
-  {
-    title: "Library Management System",
-    description:
-      "The Library Management System is a web-based application designed to efficiently manage library operations such as book records, user data.",
-    image: "/projects/project3.png",
-    tags: ["Python", "Mysql", "FastAPI", "DataBase Design", "CRUD Operation", "Mysql Connector", "Tkinter"],
-    link: "#",
-    github: "https://github.com/Pradeep-solanki744/Library-Managment-System",
-  },
-  {
-    title: "KFC Food Order Website Clone",
-    description:
-      "Developed a responsive KFC Food Ordering Website Clone using HTML, Bootstrap, and JavaScript to provide a smooth and interactive online food ordering experience.",
-    image: "/projects/project4.png",
-    tags: ["Html", "BootStrap CSS", "JavaScript",],
-    link: "#",
-    github: "https://github.com/Pradeep-solanki744/KFC-Food-order-project",
-  },
-];
+import { PROJECTS } from "../constants/data";
 
 export const Projects = () => {
   return (
@@ -66,7 +29,7 @@ export const Projects = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, idx) => (
+          {PROJECTS.map((project, idx) => (
             <div
               key={idx}
               className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
