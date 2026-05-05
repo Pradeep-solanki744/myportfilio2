@@ -1,14 +1,4 @@
-const experiences = [
-  {
-    period: "2025 — Present",
-    role: "Mern Full Stack Training",
-    company: "DUCAT school of Ai.",
-    description:
-    "Built responsive web application using react.js, redux, JavaScript (ES6+), HTML5, CSS, Tailwind CSS, Bootstrap, jQuery Ajax",
-    technologies: ["React", "TypeScript", "JavaScript", "Node.js", "Html", "CSS", "BootStrap", "TailwindCSS", "Next.js", "Mysql", "JqueryAjex", " express.js"],
-    current: true,
-  },
-];
+import { EXPERIENCES } from "../constants/data";
 
 export const Experience = () => {
   return (
@@ -54,7 +44,7 @@ export const Experience = () => {
 
           {/* Experience Items */}
           <div className="space-y-12">
-            {experiences.map((exp, idx) => (
+            {EXPERIENCES.map((exp, idx) => (
               <div
                 key={idx}
                 className="relative grid md:grid-cols-2 gap-8 animate-fade-in"

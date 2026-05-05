@@ -1,7 +1,4 @@
 import {
-  Mail,
-  Phone,
-  MapPin,
   Send,
   CheckCircle,
   AlertCircle,
@@ -10,27 +7,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/Button";
 import { useState } from "react";
-
-const contactInfo = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: "pradeepsolanki2703@gmail.com",
-    href: "Pradeepsolanki2703@gmail.com",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+91 (789) 549-0297",
-    href: "tel:+91 7895490297",
-  },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: "Noida Sector 62, UP",
-    href: "https://maps.app.goo.gl/wmiuXw2ekPjZdLAz5",
-  },
-];
+import { CONTACT_INFO } from "../constants/data";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -205,7 +182,7 @@ export const Contact = () => {
                 Contact Information
               </h3>
               <div className="space-y-4">
-                {contactInfo.map((item, i) => (
+                {CONTACT_INFO.map((item, i) => (
                   <a
                     key={i}
                     href={item.href}
