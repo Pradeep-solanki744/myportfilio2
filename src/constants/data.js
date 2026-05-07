@@ -98,7 +98,7 @@ export const EDUCATION = [
     degree: "Computer Science & Engineering",
     institution: "P K POLYTECHNIC",
     duration: "2020 - 2022",
-    description: "Built a strong academic foundation in Mathematics, Physics, and Computer Science.",
+    description: "Focused on software development, data structures, algorithms, database management, and modern web technologies.",
   },
   {
     degree: "Intermediate (UP BOARD)",
@@ -135,7 +135,7 @@ export const CONTACT_INFO = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 (789) 549-0297",
+    value: "+91 7895490297",
     href: "tel:+917895490297",
   },
   {
