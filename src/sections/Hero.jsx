@@ -76,7 +76,7 @@ export const Hero = () => {
                 <br />
               </h1>
               <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0 animate-fade-in animation-delay-200 leading-relaxed">
-                A software engineer specializing in React.js, Node.js, Next.js, 
+                A software engineer specializing in React.js, Node.js, Next.js,
                 and TypeScript. I build scalable, performant web applications that
                 users love.
               </p>
@@ -84,8 +84,11 @@ export const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg" className="w-full sm:w-auto">
-                Contact Me <ArrowRight className="w-5 h-5" />
+              <Button size="lg" asChild>
+                <a href="#contact" className="flex items-center gap-2">
+                  Contact Me
+                  <ArrowRight className="w-5 h-5" />
+                </a>
               </Button>
               <AnimatedBorderButton className="w-full sm:w-auto">
                 <a
@@ -136,7 +139,7 @@ export const Hero = () => {
               />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/profile-photo.png"
+                  src="/profile-photo.jpg"
                   alt="Pradeep Solanki"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
