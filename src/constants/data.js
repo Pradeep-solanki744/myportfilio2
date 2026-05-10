@@ -73,8 +73,8 @@ export const PROJECTS = [
     title: "Library Management System",
     description: "The Library Management System is a web-based application designed to efficiently manage library operations such as book records and user data.",
     image: "/projects/project3.png",
-    tags: ["Python", "MySQL", "FastAPI", "Database Design", "CRUD Operations", "MySQL Connector", "Tkinter"],
-    link: "#",
+    tags: ["React.Js", "JavaScript", "TailwindCSS", "Python", "MySQL", "FastAPI", "Database Design", "CRUD Operations", "MySQL Connector",],
+    link: "https://mng1.vercel.app/",
     github: "https://github.com/Pradeep-solanki744/Library-Managment-System",
   },
   {
