@@ -66,7 +66,7 @@ export const Contact = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <span className="text-secondary-foreground text-xs md:text-sm font-medium tracking-wider uppercase animate-fade-in">
+          <span className="text-secondary-foreground text-xs omd:text-sm font-medium tracking-wider uppercase animate-fade-in">
             Get In Touch
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-4 md:mb-6 animate-fade-in animation-delay-100 text-secondary-foreground leading-tight">

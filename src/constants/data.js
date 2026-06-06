@@ -79,7 +79,7 @@ export const PROJECTS = [
   },
   {
     title: "KFC Food Order Website Clone",
-    description: "Developed a responsive KFC Food Ordering Website Clone using HTML, Bootstrap, and JavaScript to provide a smooth and interactive online food ordering experience.",
+    description: "Developed a responsive KFC Food Ordering Website Clone using HTML, Bootstrap, and JavaScript to provide a smooth and interactive online food ordering experience. ",
     image: "/projects/project4.png",
     tags: ["HTML", "Bootstrap CSS", "JavaScript"],
     link: "#",
@@ -116,11 +116,19 @@ export const EDUCATION = [
 
 export const EXPERIENCES = [
   {
-    period: "2025 — Present",
+    period: "18/Aug/2025 — 01/April/2026",
     role: "MERN Full Stack Training",
     company: "DUCAT School of IT",
     description: "Building responsive web applications using React.js, Redux, JavaScript (ES6+), HTML5, CSS, Tailwind CSS, Bootstrap, and jQuery Ajax.",
     technologies: ["React", "TypeScript", "JavaScript", "Node.js", "HTML", "CSS", "Bootstrap", "Tailwind CSS", "Next.js", "MySQL", "jQuery Ajax", "Express.js"],
+    current: false,
+  },
+   {
+    period: "2026— Present",
+    role: "Self - Employed",
+    company: "Freelancer",
+    description: "Developed a responsive static corporate website for Nexera Infracast Private Limited using React.js, HTML, CSS, and JavaScript. ",
+    technologies: ["React.js","JavaScript", "HTML", "CSS", "Tailwind CSS"],
     current: true,
   },
 ];

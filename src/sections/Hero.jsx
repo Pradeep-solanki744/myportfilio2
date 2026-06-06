@@ -7,6 +7,7 @@ import {
   Instagram,
   Linkedin,
   Twitter,
+  Facebook,
   Download,
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
@@ -92,8 +93,8 @@ export const Hero = () => {
               </Button>
               <AnimatedBorderButton className="w-full sm:w-auto">
                 <a
-                  href="/Pradeep_solanki_22-04-2026.pdf"
-                  download="Pradeep_Solanki_Resume.pdf"
+                  href="/Pradeep_updateResume.pdf"
+                  download="Pradeep_updateResume.pdf"
                   className="flex items-center justify-center gap-2 w-full"
                 >
                   <Download className="w-5 h-5" />
@@ -106,16 +107,22 @@ export const Hero = () => {
             <div className="flex items-center justify-center lg:justify-start gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground hidden sm:inline-block">Follow me: </span>
               {[
-                { icon: Github, href: "https://github.com/Pradeep-solanki744" },
+                { icon: Github, 
+                  href: "https://github.com/Pradeep-solanki744" },
                 {
                   icon: Linkedin,
                   href: "https://www.linkedin.com/in/pradeep763/",
                 },
                 {
                   icon: Instagram,
-                  href: "https://www.instagram.com/_i_am__pradeep2003",
+                  href: "https://www.instagram.com/_i_am__pradeep/",
                 },
-                { icon: Twitter, href: "#" },
+                { icon: Facebook, 
+                  href: "https://www.facebook.com/profile.php?id=61589694833681" 
+                },
+                 { icon: Twitter, 
+                  href: "https://x.com/Pradeep79754411"
+                 },
               ].map((social, idx) => (
                 <a
                   key={idx}
@@ -139,7 +146,7 @@ export const Hero = () => {
               />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/profile-photo.jpg"
+                  src="/profile-photo-removebg-preview.jpg"
                   alt="Pradeep Solanki"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
@@ -155,9 +162,9 @@ export const Hero = () => {
                 </div>
                 {/* Stats Badge */}
                 <div className="absolute -top-2 -left-2 md:-top-4 md:-left-4 glass rounded-xl px-3 py-2 md:px-4 md:py-3 animate-float animation-delay-500 scale-90 md:scale-100">
-                  <div className="text-xl md:text-2xl font-bold text-primary">0+</div>
+                  <div className="text-xl md:text-2xl font-bold text-primary">2+</div>
                   <div className="text-[10px] md:text-xs text-muted-foreground">
-                    Years Exp.
+                    Month Exp.
                   </div>
                 </div>
               </div>
